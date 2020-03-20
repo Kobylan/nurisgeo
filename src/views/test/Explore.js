@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Mycards from "./Mycards"
 
-  
+
   const Explore = () => {
 
     // useEffect(() => {
@@ -11,7 +11,7 @@ import Mycards from "./Mycards"
 
     return (
         <div>
-            <h1>Coach catcher</h1>
+            <h1>kobylan</h1>
             <Mycards/>
         </div>
     );

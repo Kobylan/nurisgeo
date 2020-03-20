@@ -29,10 +29,10 @@ const wishlist = lazy(() => import("./views/apps/ecommerce/wishlist/Wishlist"))
 //**-------------------------------------**//
 //**-------------------------------------**//
 //**-------------------------------------**//
-const Homepage = lazy(() => import("./views/Coach Catcher/Home"))
-const Explore = lazy(() => import("./views/Coach Catcher/Explore"))
-const NewsFeed = lazy(() => import("./views/Coach Catcher/NewsFeed"))
-const ContatcUs = lazy(() => import("./views/Coach Catcher/ContactUs"))
+const Homepage = lazy(() => import("./views/kobylan/Home"))
+const Explore = lazy(() => import("./views/kobylan/Explore"))
+const NewsFeed = lazy(() => import("./views/kobylan/NewsFeed"))
+const ContatcUs = lazy(() => import("./views/kobylan/ContactUs"))
 const Adduser = lazy(() => import("./views/test/AddUser"))
 const test = lazy(() => import("./views/test/test"))
 //**-------------------------------------**//

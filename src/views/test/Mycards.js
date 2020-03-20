@@ -18,7 +18,7 @@ class Mycards extends React.Component {
     state = {
         users: []
       }
-    
+
       componentDidMount() {
         axios
           .get("http://localhost:1337/users")
@@ -26,7 +26,7 @@ class Mycards extends React.Component {
             this.setState({ users: response.data.user })
           )
       }
-    
+
   render() {
 
     let userCards = this.state.users.map(user=>(
@@ -66,7 +66,7 @@ class Mycards extends React.Component {
               alt="card image cap"
             />
             <CardBody>
-              <h5>coach catcher Admin</h5>
+              <h5>kobylan Admin</h5>
               <p className="mb-0">By Pixinvent Creative Studio</p>
               <span>Elite Author</span>
               <div className="card-btns d-flex justify-content-between mt-2">

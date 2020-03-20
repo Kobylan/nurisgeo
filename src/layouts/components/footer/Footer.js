@@ -21,7 +21,7 @@ const Footer = props => {
             target="_self"
             rel="noopener noreferrer"
           >
-            CoachCatcher,
+            Kobylan,
           </a>
           All rights reserved
         </span>
