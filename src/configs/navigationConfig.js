@@ -9,21 +9,14 @@ const navigationConfig = [
     badge: "warning",
     badgeText: "2",
     children: [
-      {
-        id: "home",
-        title: "Home",
-        type: "item",
-        icon: <Icon.Circle size={12} />,
-        permissions: ["admin", "editor"],
-        navLink: "/"
-      },
+
       {
         id: "analyticsDash",
         title: "Analytics",
         type: "item",
         icon: <Icon.Circle size={12} />,
         permissions: ["admin", "editor"],
-        navLink: "/ahga"
+        navLink: "/dashboard/analytics"
       },
       {
         id: "eCommerceDash",
@@ -31,22 +24,13 @@ const navigationConfig = [
         type: "item",
         icon: <Icon.Circle size={12} />,
         permissions: ["admin"],
-        navLink: "/ecommerce-dashboard"
+        navLink: "/dashboard/ecommerce"
       }
     ]
   },
   {
     type: "groupHeader",
     groupTitle: "APPS"
-  },
-  {
-    id: "explore",
-    title: "Explore",
-    type: "item",
-    icon: <Icon.Search size={20} />,
-    permissions: ["admin", "editor"],
-    navLink: "/explore",
-    filterBase : "/explore"
   },
   {
     id: "email",
@@ -156,7 +140,7 @@ const navigationConfig = [
   },
   {
     type: "groupHeader",
-    groupTitle: "UI ELEMENTS"
+    groupTitle: "UI"
   },
   {
     id: "content",

@@ -259,10 +259,9 @@ class AppRouter extends React.Component {
           <AppRoute
             exact
             path="/"
-            component={Homepage}
-          />
+          ><Redirect to="/dashboard/analytics" /></AppRoute>
           <AppRoute
-            path="/ecommerce-dashboard"
+            path="/dashboard/ecommerce"
             component={ecommerceDashboard}
           />
                     <AppRoute path="/listing" exact component={listing} />
@@ -280,6 +279,8 @@ class AppRouter extends React.Component {
           {/*-------------------------------------*/}
           {/*-------------------------------------*/}
           {/*-------------------------------------*/}
+          <AppRoute path="/dashboard/analytics" component={analyticsDashboard}/>
+          <AppRoute path="/home" component={Homepage} />
           <AppRoute path="/home" component={Homepage} />
           <AppRoute path="/explore" component={Explore} />
           <AppRoute path="/adduser" component={Adduser} />
