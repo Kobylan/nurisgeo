@@ -56,10 +56,10 @@ class Productorders extends React.Component {
             },
             total: {
               show: true,
-              label: "Total",
+              label: "Всего",
 
               formatter: () => {
-                return 42459
+                return 62893
               }
             }
           }
@@ -73,17 +73,7 @@ class Productorders extends React.Component {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>Product Orders</CardTitle>
-          <UncontrolledDropdown>
-            <DropdownToggle tag="small" className="text-bold-500 cursor-pointer">
-              Last 7 days <ChevronDown size={10} />
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem>Last 28 days</DropdownItem>
-              <DropdownItem>Last Month</DropdownItem>
-              <DropdownItem>Last Year</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
+          <CardTitle>Всего данных</CardTitle>
         </CardHeader>
         <CardBody>
           <Chart
@@ -96,7 +86,7 @@ class Productorders extends React.Component {
           <div className="chart-info d-flex justify-content-between mb-1">
             <div className="series-info d-flex align-items-center">
               <Circle strokeWidth={5} size="12" className="primary" />
-              <span className="text-bold-600 ml-50">Finished</span>
+              <span className="text-bold-600 ml-50">Температура</span>
             </div>
             <div className="series-result">
               <span className="align-middle">23043</span>
@@ -105,7 +95,7 @@ class Productorders extends React.Component {
           <div className="chart-info d-flex justify-content-between mb-1">
             <div className="series-info d-flex align-items-center">
               <Circle strokeWidth={5} size="12" className="warning" />
-              <span className="text-bold-600 ml-50">Pending</span>
+              <span className="text-bold-600 ml-50">Влажность</span>
             </div>
             <div className="series-result">
               <span className="align-middle">14658</span>
@@ -114,7 +104,7 @@ class Productorders extends React.Component {
           <div className="chart-info d-flex justify-content-between">
             <div className="series-info d-flex align-items-center">
               <Circle strokeWidth={5} size="12" className="danger" />
-              <span className="text-bold-600 ml-50">Rejected</span>
+              <span className="text-bold-600 ml-50">CO<sub>2</sub></span>
             </div>
             <div className="series-result">
               <span className="align-middle">4758</span>

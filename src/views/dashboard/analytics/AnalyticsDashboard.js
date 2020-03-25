@@ -16,8 +16,10 @@ import "../../../assets/scss/plugins/extensions/react-tour.scss"
 import "../../../assets/scss/pages/dashboard-analytics.scss"
 import "../../../assets/scss/plugins/extensions/maps.scss"
 
-import MapBasic from "../../maps/MapsBasic";
 import MapEvents from "../../maps/MapEvents";
+import MapBasic from "../../maps/MapsBasic";
+import MapGif from "../../maps/MapGif";
+import GoalOverview from "../../ui-elements/cards/analytics/GoalOverview";
 
 let $primary = "#7367F0",
   $danger = "#EA5455",
@@ -87,18 +89,11 @@ class AnalyticsDashboard extends React.Component {
 
     return (
       <React.Fragment>
-
         <Row className="match-height">
-          <Col md="6" sm="12">
-            <AvgSession labelColor={$label_color} primary={$primary} />
+          <Col md="12" sm="12">
+            <SalesCard labelColor={$label_color} primary={$primary} />
           </Col>
-          <Col md="6" sm="12">
-            <SupportTracker
-              primary={$primary}
-              danger={$danger}
-              white={$white}
-            />
-          </Col>
+
         </Row>
         <Row className="match-height">
           <Col lg="4">
@@ -111,7 +106,7 @@ class AnalyticsDashboard extends React.Component {
               dangerLight={$danger_light}
             />
           </Col>
-          <Col lg="4">
+          <Col lg="3">
             <SalesStat
               strokeColor={$stroke_color}
               infoLight={$info_light}
@@ -119,15 +114,25 @@ class AnalyticsDashboard extends React.Component {
               info={$info}
             />
           </Col>
-          <Col lg="4">
-            <ActivityTimeline />
+          <Col md="5" sm="12">
+            <SupportTracker
+              primary={$primary}
+              danger={$danger}
+              white={$white}
+            />
           </Col>
+
         </Row>
+
         <Row className="macth-height">
           <Col sm="12">
           <MapBasic />
 
         </Col>
+          <Col sm="12">
+            <MapGif />
+
+          </Col>
         </Row>
         {this.props.layout !== "horizontal" && this.state.width >= 1200 && <Tour
             steps={steps}

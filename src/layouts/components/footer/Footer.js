@@ -15,18 +15,11 @@ const Footer = props => {
     >
       <p className="mb-0 clearfix">
         <span className="float-md-left d-block d-md-inline-block mt-25">
-          COPYRIGHT © {new Date().getFullYear()}
-          <a
-            href="/"
-            target="_self"
-            rel="noopener noreferrer"
-          >
-            Kobylan,
-          </a>
-          All rights reserved
+          Разработали Amina, Nurislam
         </span>
         <span className="float-md-right d-none d-md-block">
-          <span className="align-middle">Hand-crafted & Made with</span>{" "}
+          <span className="align-middle">Руководитель Орынбасарова Э.
+</span>{" "}
           <Heart className="text-danger" size={15} />
         </span>
       </p>

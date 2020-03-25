@@ -13,6 +13,7 @@ import {
 } from "reactstrap"
 import Chart from "react-apexcharts"
 import { ChevronsRight, ChevronDown } from "react-feather"
+import Sales from "./Sales";
 
 class AvgSessions extends React.Component {
   state = {
@@ -69,67 +70,24 @@ class AvgSessions extends React.Component {
     return (
       <Card>
         <CardBody>
-          <Row className="pb-50">
-            <Col
-              lg={{ size: 6, order: 1 }}
-              sm={{ size: 12, order: 2 }}
-              xs={{ order: 2 }}
-              className="d-flex justify-content-between flex-column mt-lg-0 mt-2"
-            >
-              <div className="session-info">
-                <h2 className="text-bold-600 mb-25">2.7K</h2>
-                <p className="text-bold-500 mb-75">Avg Sessions</p>
-                <h5 className="font-medium-2">
-                  <span className="text-success">+5.2% </span>
-                  <span>vs last 7 days</span>
-                </h5>
-              </div>
-              <Button.Ripple className="btn-block shadow" color="primary">
-                View Details <ChevronsRight size={15} />
-              </Button.Ripple>
-            </Col>
-            <Col
-              lg={{ size: 6, order: 2 }}
-              sm={{ size: 12, order: 1 }}
-              xs={{ order: 1 }}
-              className="d-flex justify-content-between flex-column text-right"
-            >
-              <UncontrolledDropdown>
-                <DropdownToggle tag="small" className="text-bold-500 cursor-pointer">
-                  Last 7 days <ChevronDown size={10} />
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Last 28 days</DropdownItem>
-                  <DropdownItem>Last Month</DropdownItem>
-                  <DropdownItem>Last Year</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <Chart
-                options={this.state.options}
-                series={this.state.series}
-                type="bar"
-                height={200}
-              />
-            </Col>
-          </Row>
-          <hr />
           <Row className="pt-50">
             <Col md="6" sm="12">
-              <p className="mb-0">Goal: $100000</p>
-              <Progress className="mt-25" value="50" />
+              <p className="mb-0">Влажность: 25%</p>
+              <Progress className="mt-25" value="25" />
             </Col>
             <Col md="6" sm="12">
-              <p className="mb-0">Users: 100K</p>
-              <Progress className="mt-25" color="warning" value="60" />
+              <p className="mb-0">Температура: 100%</p>
+              <Progress className="mt-25" color="warning" value="100" />
             </Col>
             <Col md="6" sm="12">
-              <p className="mb-0">Retention: 90%</p>
-              <Progress className="mt-25" color="danger" value="70" />
+                <p className="mb-0">CO<sub>2</sub>: 100%</p>
+              <Progress className="mt-25" color="danger" value="100" />
             </Col>
             <Col md="6" sm="12">
-              <p className="mb-0">Duration: 1yr</p>
-              <Progress className="mt-25" color="success" value="80" />
+              <p className="mb-0">PM 2.5: 90%</p>
+              <Progress className="mt-25" color="success" value="90" />
             </Col>
+
           </Row>
         </CardBody>
       </Card>

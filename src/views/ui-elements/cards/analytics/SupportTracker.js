@@ -18,7 +18,7 @@ class SupportTracker extends React.Component {
   state = {
     options: {
       chart: {
-       
+
       },
       plotOptions: {
         radialBar: {
@@ -63,31 +63,21 @@ class SupportTracker extends React.Component {
       stroke: {
         dashArray: 8
       },
-      labels: ["Completed Tickets"]
+      labels: ["Завершенные датчики"]
     },
-    series: [83]
+    series: [100]
   }
   render() {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>Support Tracker</CardTitle>
-          <UncontrolledDropdown>
-            <DropdownToggle className="cursor-pointer" tag="small">
-              Last 7 days <ChevronDown size={10} />
-            </DropdownToggle>
-            <DropdownMenu right>
-              <DropdownItem>Last 28 days</DropdownItem>
-              <DropdownItem>Last Month</DropdownItem>
-              <DropdownItem>Last Year</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledDropdown>
+          <CardTitle>Количество эко-датчиков</CardTitle>
         </CardHeader>
         <CardBody className="pt-0">
           <Row>
             <Col sm="2" className="d-flex flex-column flex-wrap text-center">
-              <h1 className="font-large-2 text-bold-600 mt-2 mb-0">163</h1>
-              <small>Tickets</small>
+              <h1 className="font-large-2 text-bold-600 mt-2 mb-0">50</h1>
+              <small>датчиков</small>
             </Col>
             <Col sm="10" className="d-flex justify-content-center">
               <Chart
@@ -101,16 +91,16 @@ class SupportTracker extends React.Component {
           </Row>
           <div className="chart-info d-flex justify-content-between">
             <div className="text-center">
-              <p className="mb-50">New Tickets</p>
+              <p className="mb-50">Новых датчиков</p>
               <span className="font-large-1">29</span>
             </div>
             <div className="text-center">
-              <p className="mb-50">Open Tickets</p>
-              <span className="font-large-1">63</span>
+              <p className="mb-50">Активных датчиков</p>
+              <span className="font-large-1">50</span>
             </div>
             <div className="text-center">
-              <p className="mb-50">Response Time</p>
-              <span className="font-large-1">1d</span>
+              <p className="mb-50">Обновление каждые</p>
+              <span className="font-large-1">1 мин</span>
             </div>
           </div>
         </CardBody>

@@ -77,11 +77,11 @@ class Sales extends React.Component {
     },
     series: [
       {
-        name: "Sales",
+        name: "PM2.5",
         data: [90, 50, 86, 40, 100, 20]
       },
       {
-        name: "Visit",
+        name: "CO2",
         data: [70, 75, 70, 76, 20, 85]
       }
     ]
@@ -91,10 +91,9 @@ class Sales extends React.Component {
       <Card>
         <CardHeader>
           <div className="title">
-            <CardTitle>Sales</CardTitle>
-            <p className="text-muted mb-0">Last 6 months</p>
+            <CardTitle>Динамика изменений</CardTitle>
+            <p className="text-muted mb-0">Последние 6 месяцов</p>
           </div>
-          <MoreVertical className="cursor-pointer" size={20} />
         </CardHeader>
         <CardBody>
           <div className="item-info d-inline-block mr-2">
@@ -108,7 +107,7 @@ class Sales extends React.Component {
                 marginRight: "5px"
               }}
             />
-            <span>Sales</span>
+            <span>PM 2.5</span>
           </div>
           <div className="item-info d-inline-block">
             <div
@@ -121,7 +120,7 @@ class Sales extends React.Component {
                 marginRight: "5px"
               }}
             />
-            <span>Visits</span>
+            <span>CO<sub>2</sub></span>
           </div>
           <Chart
             options={this.state.options}

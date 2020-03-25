@@ -1,26 +1,32 @@
 import React from "react"
 import { Card, CardHeader, CardTitle, CardBody } from "reactstrap"
-import { Map, TileLayer, Marker } from "react-leaflet"
+import { Map, TileLayer } from "react-leaflet"
+import HeatmapLayer from "react-leaflet-heatmap-layer";
+import { addressPoints } from './realworld.10000.js';
+import {date} from "yup";
 
 class MapsBasic extends React.Component {
-  state = {
-    center: [51.5074, 0.1278],
-    zoom: 13
-  }
 
   render() {
+
     return (
       <Card className="overflow-hidden">
         <CardHeader>
-          <CardTitle>Basic</CardTitle>
+          <CardTitle> Данные обновлены на - {Date()} </CardTitle>
         </CardHeader>
         <CardBody>
-          <Map center={this.state.center} zoom={this.state.zoom}>
+          <Map center={[0,0]} zoom={13}>
+            <HeatmapLayer
+              fitBoundsOnLoad
+              fitBoundsOnUpdate
+              points={addressPoints}
+              longitudeExtractor={m => m[1]}
+              latitudeExtractor={m => m[0]}
+              intensityExtractor={m => parseFloat(m[1])} />
             <TileLayer
-              attribution='&ampcopy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-              url="https://{s}.tile.osm.org/{z}/{x}/{y}.png"
+              url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
+              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
-            <Marker position={this.state.center} />
           </Map>
         </CardBody>
       </Card>
