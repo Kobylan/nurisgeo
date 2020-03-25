@@ -3,23 +3,15 @@ import { connect } from "react-redux"
 import { Row, Col } from "reactstrap"
 import Tour, { STATUS } from "react-joyride"
 import SalesCard from "./SalesCard"
-import SuberscribersGained from "../../ui-elements/cards/statistics/SubscriberGained"
-import OrdersReceived from "../../ui-elements/cards/statistics/OrdersReceived"
-import AvgSession from "../../ui-elements/cards/analytics/AvgSessions"
 import SupportTracker from "../../ui-elements/cards/analytics/SupportTracker"
 import ProductOrders from "../../ui-elements/cards/analytics/ProductOrders"
 import SalesStat from "../../ui-elements/cards/analytics/Sales"
-import ActivityTimeline from "./ActivityTimeline"
-import DispatchedOrders from "./DispatchedOrders"
 import themeConfig from "../../../configs/themeConfig"
 import "../../../assets/scss/plugins/extensions/react-tour.scss"
 import "../../../assets/scss/pages/dashboard-analytics.scss"
 import "../../../assets/scss/plugins/extensions/maps.scss"
-
-import MapEvents from "../../maps/MapEvents";
 import MapBasic from "../../maps/MapsBasic";
 import MapGif from "../../maps/MapGif";
-import GoalOverview from "../../ui-elements/cards/analytics/GoalOverview";
 
 let $primary = "#7367F0",
   $danger = "#EA5455",
