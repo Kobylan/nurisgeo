@@ -24,7 +24,7 @@ html {
       transition: 300ms ease all;
       backface-visibility: hidden;
       min-height: calc(100% - 4rem);
-      margin-left: $menu-expanded-width;
+      margin-left: 0;
       &.app-content {
         overflow: hidden;
         &.show-overlay {
@@ -72,7 +72,7 @@ html {
       }
       .content-wrapper {
         padding: calc(#{$content-padding} - 0.4rem) #{$content-padding} 0;
-        margin-top: $navbar-height + 1;
+        margin-top: 0;
         min-height: calc(100vh - 9.75rem);
         .content-header-title {
           font-weight: 500;

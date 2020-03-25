@@ -120,7 +120,7 @@ class VerticalLayout extends PureComponent {
 
     if (this.collapsedPaths.includes(pathname)) {
       this.handleRouteChange()
-    } 
+    }
   }
 
   handleRouteChange = () => {
@@ -258,17 +258,17 @@ class VerticalLayout extends PureComponent {
           "navbar-sticky": appProps.navbarType === "sticky",
           "navbar-floating": appProps.navbarType === "floating",
           "navbar-hidden": appProps.navbarType === "hidden",
-          "theme-primary": !menuThemeArr.includes(appProps.menuTheme)   
+          "theme-primary": !menuThemeArr.includes(appProps.menuTheme)
         })}
       >
-        <Sidebar {...sidebarProps} />
+        {/*<Sidebar {...sidebarProps} />*/}
         <div
           className={classnames("app-content content", {
             "show-overlay": this.state.appOverlay === true
           })}
           onClick={this.handleAppOverlayClick}
         >
-          <Navbar {...navbarProps} />
+          {/*<Navbar {...navbarProps} />*/}
           <div className="content-wrapper">{this.props.children}</div>
         </div>
 

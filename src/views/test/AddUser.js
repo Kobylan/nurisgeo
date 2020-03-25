@@ -33,15 +33,15 @@ const adduserAPI = (values) => {
     .post("http://localhost:1337/user",values)
     .then(response =>{
         console.log(response);
-        
-        if(response.status == 200)
+
+        if(response.status === 200)
         toast.success('Success')
-        
+
         else
         toast.error("Failed")
     })
     console.log(values);
-    
+
 }
 
 class AddUser extends React.Component {

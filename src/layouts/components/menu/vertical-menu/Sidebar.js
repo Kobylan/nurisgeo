@@ -143,7 +143,7 @@ class Sidebar extends Component {
               >
                 <div className="menu-swipe-area d-xl-none d-block vh-100"></div>
               </Hammer>
-              
+
                 <div
                   className={classnames(
                     `main-menu menu-fixed menu-light menu-accordion menu-shadow theme-${activeTheme}`,

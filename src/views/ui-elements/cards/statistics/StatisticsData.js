@@ -50,7 +50,7 @@ export const subscribersGained = {
 export const subscribersGainedSeries = [
   {
     name: "Subscribers",
-    data: [28, 40, 36, 52, 38, 60, 55]
+    data: [2123, 31230, 363123, 53122, 31238, 13260, 53125]
   }
 ]
 

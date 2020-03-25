@@ -14,6 +14,10 @@ import DispatchedOrders from "./DispatchedOrders"
 import themeConfig from "../../../configs/themeConfig"
 import "../../../assets/scss/plugins/extensions/react-tour.scss"
 import "../../../assets/scss/pages/dashboard-analytics.scss"
+import "../../../assets/scss/plugins/extensions/maps.scss"
+
+import MapBasic from "../../maps/MapsBasic";
+import MapEvents from "../../maps/MapEvents";
 
 let $primary = "#7367F0",
   $danger = "#EA5455",
@@ -49,10 +53,10 @@ class AnalyticsDashboard extends React.Component {
     window.addEventListener("resize", this.updateWidth, false)
   }
  }
- 
+
 
   render() {
-    
+
     const steps = [
       {
         target: '[data-tour="toggle-icon"]',
@@ -80,20 +84,10 @@ class AnalyticsDashboard extends React.Component {
         disableBeacon : true
       }
     ]
-    
+
     return (
       <React.Fragment>
-        <Row className="match-height">
-          <Col lg="6" md="12">
-            <SalesCard />
-          </Col>
-          <Col lg="3" md="6" sm="12">
-            <SuberscribersGained />
-          </Col>
-          <Col lg="3" md="6" sm="12">
-            <OrdersReceived />
-          </Col>
-        </Row>
+
         <Row className="match-height">
           <Col md="6" sm="12">
             <AvgSession labelColor={$label_color} primary={$primary} />
@@ -131,8 +125,9 @@ class AnalyticsDashboard extends React.Component {
         </Row>
         <Row className="macth-height">
           <Col sm="12">
-            <DispatchedOrders />
-          </Col>
+          <MapBasic />
+
+        </Col>
         </Row>
         {this.props.layout !== "horizontal" && this.state.width >= 1200 && <Tour
             steps={steps}
@@ -147,8 +142,8 @@ class AnalyticsDashboard extends React.Component {
             }}
           />
         }
-          
-        
+
+
       </React.Fragment>
     )
   }

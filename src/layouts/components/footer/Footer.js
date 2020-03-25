@@ -30,13 +30,7 @@ const Footer = props => {
           <Heart className="text-danger" size={15} />
         </span>
       </p>
-      {props.hideScrollToTop === false ? (
-        <ScrollToTop showUnder={160}>
-          <Button color="primary" className="btn-icon scroll-top">
-            <ArrowUp size={15} />
-          </Button>
-        </ScrollToTop>
-      ) : null}
+
     </footer>
   )
 }
